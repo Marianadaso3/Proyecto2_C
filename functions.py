@@ -21,6 +21,7 @@ tres   = lambda f: lambda x: f(f(f(x))) #d
 # Extras cuatro y cinco 
 cuatro  = lambda f: lambda x: f(f(f(f(x))))
 cinco  = lambda f: lambda x: f(f(f(f(f(x)))))
+ocho = lambda f: lambda x: f(f(f(f(f(f(f(f(x))))))))
 
 #Definimos procesos numericas con lambda 
 op_sucesor = lambda n: lambda f: lambda x: f(n(f)(x)) #e
@@ -34,7 +35,7 @@ op_beta = lambda x: 2 * x
 
 #Funciones para ejemplificar 
 def valores_num():
-    resultado_cero = cero(op_beta)(5) #probar con beta
+    resultado_cero = cero(op_beta)(5) #prueba con beta
     resultado_uno = uno(op_beta)(5)
     resultado_dos = dos(op_beta)(5)
     resultado_tres = tres(op_beta)(5)
